@@ -1,10 +1,10 @@
 # Predicting Company Returns
 
 ## EDA
-1. Number of duplicate entries on COMPANIES column: 445
-2. Distribution of Implied Return
+1. Distribution of Implied Return
 ![alt text](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/TargetVar.png)
-3. Percentage of Missing Values in Numerical Variables
+
+2. Percentage of Missing Values in Numerical Variables
    
 | Variable | # of Missing Values | % of Missing Values |
 |---- | ---- | ---- |
@@ -13,7 +13,7 @@
 |DEAL_SIZE | 3 | 0.001805 |
 |RAISED_TO_DATE | 3 | 0.001805 |
 
-4. Relation between Implied Return and Missing Data
+3. Relation between Implied Return and Missing Data
    
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/DealSize.png)
 
@@ -32,13 +32,13 @@
     -  The std for observations with missing data for DEAL_SIZE and RAISED_TO_DATE observations has a higher variability.
     - It might indicate that there's nire uncertainity or risk associated with those observation.
 
- 5. Discrete Variables
+4 . Discrete Variables
     
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/MSE_Distr..png)
 
 - We can expect higher returns for bigger market sizes
 
-6. Continuous Variable
+5. Continuous Variable
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ContiVars_DIstr.png)
 
@@ -56,7 +56,7 @@
 - Since we are using tree-based methods: Random Forest Regressor and XGBoost Regressor, we are not dealing with skewness.
 
 
-7. Temporal Variable Analysis
+6. Temporal Variable Analysis
 
 - Trend of Implied Return with respect to Year Founded
 
@@ -76,7 +76,7 @@
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealDays.png)
 
 
-8. Categorical Variable Analysis
+7. Categorical Variable Analysis
 
 - Cardinality
 
@@ -85,7 +85,7 @@
   - Significant amount of columns have lower occurances of rare categorical labels. This might effect the model's performance.
 
 
-9. Qualitative Variables
+8. Qualitative Variables
 
 - SERIES: ['Series A', 'Series B', 'Series A1', 'Series A2', 'Series B1', 'Series B2', 'Series A3']
   
