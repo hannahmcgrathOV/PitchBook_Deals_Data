@@ -42,16 +42,18 @@
 
 ----
 
-### 4. Relation between Implied Return and Missing Data from Numerical Variables
+### 4. Relation between Implied Return and Missing Data
 
 - Analysing the impact of missing data on Implied Return:
      -   We separate the Implied Returns into two groups: missing information and information is present for each variable
      -   We then calculate the average(mean) Implied Return for each group and also a range around this average to indicate the typical variation(standard deviation) we might expect
      -   If there's a notable difference in Implied Return between the two groups, it suggests that missing information might be influencing the Implied Returns in some way. 
-   
+
+#### Numerical Variables
+
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/NumMissingRel.png)
 
-- Comparing Means
+- Comparing Mean
     - The mean return is much higher for observations with missing data for DEAL_SIZE and RAISED_TO_DATE.
     - It might indicate that higher returns are associated with missing data for some reason.
 
@@ -59,6 +61,17 @@
     -  The variation for observations with missing data for DEAL_SIZE and RAISED_TO_DATE has a higher variability.
     - It might indicate that there's an uncertainity or risk associated with those missing observations.
 
+#### Categorical Variables
+
+![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/CatMissingRel.png)
+
+- Comparing Mean
+    - The mean return is much higher for observations with missing data for QUALITY_DEALS_INVESTORS, 'Firms: Best Investors', 'Firms: Worst'.
+    - It might indicate that higher returns are associated with missing data for some reason.
+
+- Comparing Standard Deviation
+    - The variation for observations with missing data isn't significant.
+    - We cannot drop these missing values without further analysis.
 ----
 
 ### 5. Distribution of Numerical Variables
