@@ -34,6 +34,7 @@
 | HQ_LOCATION | 7 |0.003926 |
 | HQ_GLOBAL_REGION | 7 |0.003926 | 
 | HQ_GLOBAL_SUB_REGION | 7 |0.003926 |
+| COMPANY_CITY | 9 | 0.005048 |
 | COMPANY_COUNTRY_TERRITORY| 7 |0.003926|
 | Quality Deals Investors | 1 |0.000561 |
 | Firms: Best Investors | 1 | 0.000561|
@@ -131,17 +132,20 @@
 
 ### 8. Qualitative Variables
 
-- SERIES: ['Series A', 'Series B', 'Series A1', 'Series A2', 'Series B1', 'Series B2', 'Series A3']
+These variables have an intrinsic order. <br>
+For example, the 'SERIES' column contain different stages of funding rounds. 'Series A' and 'Series B' happens at different stages of a company.
+
+- SERIES:
   
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/Series.png)
 
 
-- Market Size Estimate: [1, 2, 3, 4, 5]
+- Market Size Estimate
   
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/MSE_Distr..png)
 
 
-- Valuation Tier: [$5M - $25M, $25M - $50M, $50M - $100M, $100M - $150M, >$1B]
+- Valuation Tier:
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ValuationTier.png)
 
 
