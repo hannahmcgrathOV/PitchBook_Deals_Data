@@ -4,6 +4,8 @@
 ### 1. Distribution of Implied Return
 ![alt text](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/TargetVar.png)
 
+- The Implied Return data is highly skewed.
+- We can observe some outliers with unsual returns(>400).
 ---- 
 
 ### 2. Percentage of Missing Values in Numerical Variables
@@ -15,9 +17,32 @@
 |DEAL_SIZE | 3 | 0.001805 |
 |RAISED_TO_DATE | 3 | 0.001805 |
 
+
+### 3. Percentage of Missing Values in Categorical Variables
+
+| Variable | # of Missing Values | % of Missing Values |
+|---- | ---- | ---- |
+| Technical Degree | 457 |0.256310 | 
+| Top University | 457 |0.256310 |
+| Individual Investor: Midas List | 62 |0.034773 | 
+| Individual Investor: Super Angel | 62 | 0.034773|
+| Individual Investor: Best Performance | 62 | 0.034773| 
+| Valuation Tier | 37 | 0.020752|
+| Technical Prior Role | 14 |0.007852 | 
+| FAANG Employee | 14 |0.007852 |
+| SERIES | 13 | 0.007291 | 
+| HQ_LOCATION | 7 |0.003926 |
+| HQ_GLOBAL_REGION | 7 |0.003926 | 
+| HQ_GLOBAL_SUB_REGION | 7 |0.003926 |
+| COMPANY_COUNTRY_TERRITORY| 7 |0.003926|
+| Quality Deals Investors | 1 |0.000561 |
+| Firms: Best Investors | 1 | 0.000561|
+| Firm: Worst | 1 | 0.000561|
+| Software Sector | 1 |0.000561 |
+
 ----
 
-### 3. Relation between Implied Return and Missing Data from Numerical Variables
+### 4. Relation between Implied Return and Missing Data from Numerical Variables
 
 - Analysing the impact of missing data on Implied Return:
      -   We separate the Implied Returns into two groups: missing information and information is present for each variable
@@ -50,28 +75,38 @@
 
 ----
 
-6. Temporal Variable Analysis
+### 6. Temporal Variable Analysis
 
-- Trend of Implied Return with respect to Year Founded
+#### Trend of Implied Return with respect to Year Founded
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnYearFound.png)
 
-- Trend of Implied Return with respect to Deal Date
+#### Trend of Implied Return with respect to Deal Date
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealD.png)
 
-- Trend of Implied Return with respect to Month of the Deal
+#### Trend of Implied Return with respect to Number of Days from the Deal
+
+![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealDays.png)
+
+
+- The older the company is the higher the returns are. This is common to expect.
+- Why shouldn't we drop these varialbes from the data?
+  -   Our goal is to predict the returns of a company no matter when it is founded.
+  -   Also, we are not intrested in newly founded companies as of now. Or we could group the companies based on specific criteria.
+
+#### Trend of Implied Return with respect to Month of the Deal
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealM.png)
 
 
-- Trend of Implied Return with respect to Number of Days from the Deal
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealDays.png)
+- Higher returns are expected from companies when a deal happened in January.
+- This trend dropped till March, and from March we can observe a rise in returns until July
+- Lower returns are expected from companies when a deal happened from September to December.
 
 ----
 
-7. Categorical Variable Analysis
+### 7. Categorical Variable Analysis
 
 - Cardinality
 
@@ -81,7 +116,7 @@
 
 ----
 
-8. Qualitative Variables
+### 8. Qualitative Variables
 
 - SERIES: ['Series A', 'Series B', 'Series A1', 'Series A2', 'Series B1', 'Series B2', 'Series A3']
   
