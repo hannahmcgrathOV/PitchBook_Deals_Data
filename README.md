@@ -31,10 +31,10 @@
 | Technical Prior Role | 14 |0.007852 | 
 | FAANG Employee | 14 |0.007852 |
 | SERIES | 13 | 0.007291 | 
+| COMPANY_CITY | 9 | 0.005048 |
 | HQ_LOCATION | 7 |0.003926 |
 | HQ_GLOBAL_REGION | 7 |0.003926 | 
 | HQ_GLOBAL_SUB_REGION | 7 |0.003926 |
-| COMPANY_CITY | 9 | 0.005048 |
 | COMPANY_COUNTRY_TERRITORY| 7 |0.003926|
 | Quality Deals Investors | 1 |0.000561 |
 | Firms: Best Investors | 1 | 0.000561|
