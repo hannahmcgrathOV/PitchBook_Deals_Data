@@ -1,10 +1,12 @@
 # Predicting Company Returns
 
 ## EDA
-1. Distribution of Implied Return
+### 1. Distribution of Implied Return
 ![alt text](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/TargetVar.png)
 
-2. Percentage of Missing Values in Numerical Variables
+---- 
+
+### 2. Percentage of Missing Values in Numerical Variables
    
 | Variable | # of Missing Values | % of Missing Values |
 |---- | ---- | ---- |
@@ -13,48 +15,40 @@
 |DEAL_SIZE | 3 | 0.001805 |
 |RAISED_TO_DATE | 3 | 0.001805 |
 
-3. Relation between Implied Return and Missing Data
+----
+
+### 3. Relation between Implied Return and Missing Data from Numerical Variables
+
+- Analysing the impact of missing data on Implied Return:
+     -   We separate the Implied Returns into two groups: missing information and information is present for each variable
+     -   We then calculate the average(mean) Implied Return for each group and also a range around this average to indicate the typical variation(standard deviation) we might expect
+     -   If there's a notable difference in Implied Return between the two groups, it suggests that missing information might be influencing the Implied Returns in some way. 
    
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/DealSize.png)
+![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/NumMissingRel.png)
 
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/PreMonVal.png)
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/PostMonVal.png)
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/RaisedToDate.png)
-
-- Comparing Medians
-    - The median return is much higher for observations with missing data for DEAL_SIZE and RAISED_TO_DATE.
+- Comparing Means
+    - The mean return is much higher for observations with missing data for DEAL_SIZE and RAISED_TO_DATE.
     - It might indicate that higher returns are associated with missing data for some reason.
-    - The missing data might not be random and could be related to IMPLIED_RETURN.
 
 - Comparing Standard Deviation
-    -  The std for observations with missing data for DEAL_SIZE and RAISED_TO_DATE observations has a higher variability.
-    - It might indicate that there's nire uncertainity or risk associated with those observation.
+    -  The variation for observations with missing data for DEAL_SIZE and RAISED_TO_DATE has a higher variability.
+    - It might indicate that there's an uncertainity or risk associated with those missing observations.
 
-4 . Discrete Variables
-    
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/MSE_Distr..png)
+----
 
-- We can expect higher returns for bigger market sizes
-
-5. Continuous Variable
+### 5. Distribution of Numerical Variables
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ContiVars_DIstr.png)
 
-- All the continous variables are highly skewed!
-- Skewness of the varaibles with respect to target variable
+- All the numerical variables are highly skewed!
+  
+- Skewness of the numerical varaibles with respect to Implied Return
 
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/DealSize_skew.png)
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/PostMonVal_skew.png)
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/PostMonVal_skew.png)
-
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/RaisedToDate_skew.png)
+![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/NumVarSkew.png)
 
 - Since we are using tree-based methods: Random Forest Regressor and XGBoost Regressor, we are not dealing with skewness.
 
+----
 
 6. Temporal Variable Analysis
 
@@ -75,6 +69,7 @@
 
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ReturnDealDays.png)
 
+----
 
 7. Categorical Variable Analysis
 
@@ -84,6 +79,7 @@
 
   - Significant amount of columns have lower occurances of rare categorical labels. This might effect the model's performance.
 
+----
 
 8. Qualitative Variables
 
@@ -101,6 +97,7 @@
 ![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/ValuationTier.png)
 
 
+----
 
 ## Model v1 - Baseline
 - Model: Random Forest Regressor
