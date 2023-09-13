@@ -64,7 +64,7 @@
 
 #### Categorical Variables
 
-![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/CatMissingRel.png)
+![DEAL_SIZE](https://github.com/krishna-ov/PitchBook_Deals_Data/blob/main/eda_viz/CatMissingRel_1.png)
 
 - Comparing Mean
     - The mean return is much higher for observations with missing data for QUALITY_DEALS_INVESTORS, 'Firms: Best Investors', 'Firms: Worst'.
